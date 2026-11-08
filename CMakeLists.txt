@@ -1,6 +1,6 @@
 cmake_minimum_required(VERSION 3.22)
 project(audioplugin)
-set(CXX_STANDARD_23)
+set(CXX_STANDARD 23)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
 set(LIB_DIR "${CMAKE_CURRENT_SOURCE_DIR}/libs")
@@ -13,3 +13,9 @@ CPMAddPackage(
     VERSION 9.0.5
     SOURCE_DIR ${LIB_DIR}/juce
 )
+
+if (MSVC)
+    add_compile_options(/Wall /WX)
+else()
+    add_compile_options(-Wall -Wextra -Wpedantic)
+endif()
