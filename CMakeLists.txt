@@ -9,5 +9,5 @@ include(cmake/cpm.cmake)
 CPMAddPackage(
     NAME JUCE
     GIT_TAG master
-    GITHUB_REPOSITORY juce_framework/JUCE 
+    GITHUB_REPOSITORY juce-framework/JUCE 
 )
