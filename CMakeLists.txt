@@ -10,5 +10,6 @@ CPMAddPackage(
     NAME JUCE
     GITHUB_REPOSITORY juce-framework/JUCE 
     GIT_TAG 9.0.5 
-    VERSION v9.0.5
+    VERSION 9.0.5
+    SOURCE_DIR ${LIB_DIR}/juce
 )
