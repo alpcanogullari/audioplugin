@@ -24,4 +24,4 @@ target_link_libraries(${PROJECT_NAME}
 
 add_subdirectory(test)
 include(GoogleTest)
-gtestx_discover_tests(${PROJECT_NAME})
+gtest_discover_tests(${PROJECT_NAME})

@@ -2,7 +2,7 @@
 #include "PluginProcessor.h"
 
 namespace audio_plugin_test {
-    TEST(AudioPluginAudioProcessor, Foo) {
+    TEST(AudioPluginAudioProcessor, PassesSilenceThroughUnchanged) {
         AudioPluginAudioProcessor processor{};
         ASSERT_FALSE(true);
     }
