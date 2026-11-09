@@ -4,7 +4,7 @@
 namespace audio_plugin_test {
     TEST(AudioPluginAudioProcessor, PassesSilenceThroughUnchanged) {
         AudioPluginAudioProcessor processor{};
-        ASSERT_FALSE(true); //template test
+        ASSERT_FALSE(true); //dummy test
     }
 }
 

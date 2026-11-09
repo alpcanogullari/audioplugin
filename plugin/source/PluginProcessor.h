@@ -1,6 +1,9 @@
 #pragma once
 
+#include "juce_audio_processors_headless/juce_audio_processors_headless.h"
+#include "juce_core/juce_core.h"
 #include <juce_audio_processors/juce_audio_processors.h>
+#include <memory>
 
 //==============================================================================
 class AudioPluginAudioProcessor final : public juce::AudioProcessor
@@ -46,12 +49,49 @@ private:
     //==============================================================================
 
     static juce::AudioProcessorValueTreeState::ParameterLayout
-    juce::AudioPlugin::createLayout(); 
+    createLayout()
     {
         juce::AudioProcessorValueTreeState::ParameterLayout layout;
+        layout.add(std::make_unique<juce::AudioParameterFloat>
+            (
+                "Low Cut Freq", 
+                "Low Cut Freq",
+                juce::NormalisableRange<float>(20.0f, 20000.0f, 1.0f, 0.25f),
+                20.0f
+            )    
+        );    
+
+        layout.add(std::make_unique<juce::AudioParameterFloat>
+            (
+                "High Cut Freq", 
+                "High Cut Freq",
+                juce::NormalisableRange<float>(20.0f, 20000.0f, 1.0f, 0.25f),
+                20000.0f
+            )    
+        );  
+
+
+        layout.add(std::make_unique<juce::AudioParameterFloat>
+            (
+                "Peak Freq", 
+                "Peak Freq",
+                juce::NormalisableRange<float>(20.0f, 20000.0f, 1.0f, 0.25f),
+                20.0f
+            )    
+        );  
+
+        layout.add(std::make_unique<juce::AudioParameterFloat>
+            (
+                "Peak Gain", 
+                "Peak Gain",
+                juce::NormalisableRange<float>(20.0f, 20000.0f, 1.0f, 0.25f),
+                20.0f
+            )    
+        );  
         
-        layout.add
     }
+
+
 
     JUCE_DECLARE_NON_COPYABLE_WITH_LEAK_DETECTOR (AudioPluginAudioProcessor)
 };

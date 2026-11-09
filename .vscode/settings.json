@@ -1,4 +1,12 @@
 {
   "cmake.cmakePath": "/Applications/CMake.app/Contents/bin/cmake",
-  "C_Cpp.errorSquiggles": "disabled"
+  "C_Cpp.errorSquiggles": "disabled",
+  "C_Cpp.intelliSenseEngine": "disabled",
+  "clangd.path": "/Library/Developer/CommandLineTools/usr/bin/clangd",
+  "editor.suggestOnTriggerCharacters": true,
+  "editor.quickSuggestions": {
+    "other": true,
+    "comments": false,
+    "strings": false
+  }
 }
