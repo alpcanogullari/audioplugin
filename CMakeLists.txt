@@ -17,7 +17,7 @@ CPMAddPackage(
 CPMAddPackage(
     NAME GOOGLETEST
     GITHUB_REPOSITORY google/googletest
-    VERSION 1.19.0
+    VERSION 1.18.0
     SOURCE_DIR ${LIB_DIR}/googletest
     OPTIONS
         "INSTALL_GTEST OFF"

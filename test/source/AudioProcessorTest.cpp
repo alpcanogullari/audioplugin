@@ -1,5 +1,5 @@
 #include <gtest/gtest.h>
-#include <audioplugin/PluginProcessor.h>
+#include "PluginProcessor.h"
 
 namespace audio_plugin_test {
     TEST(AudioPluginAudioProcessor, Foo) {
