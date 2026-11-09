@@ -22,6 +22,5 @@ target_link_libraries(${PROJECT_NAME}
        GTest::gtest_main 
     )
 
-add_subdirectory(test)
 include(GoogleTest)
 gtest_discover_tests(${PROJECT_NAME})

@@ -22,7 +22,9 @@ CPMAddPackage(
     OPTIONS
         "INSTALL_GTEST OFF"
         "gtest_force_shared_crt ON"
-)
+    )
+
+
 
 enable_testing()
 
@@ -32,5 +34,5 @@ else()
     add_compile_options(-Wall -Wextra -Wpedantic)
 endif()
 
-
+add_subdirectory(test)
 add_subdirectory(plugin)

@@ -44,5 +44,14 @@ public:
 
 private:
     //==============================================================================
+
+    static juce::AudioProcessorValueTreeState::ParameterLayout
+    juce::AudioPlugin::createLayout(); 
+    {
+        juce::AudioProcessorValueTreeState::ParameterLayout layout;
+        
+        layout.add
+    }
+
     JUCE_DECLARE_NON_COPYABLE_WITH_LEAK_DETECTOR (AudioPluginAudioProcessor)
 };
